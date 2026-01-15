@@ -7,8 +7,25 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/Rubrica.png" />
 </head>
+
+<script>
+  /* =========================
+     ANIMAÇÃO DE SCROLL
+  ========================= */
+</script>
+
 <body>
   <div class="topbar"></div>
+  
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar"></div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <!-- NAV -->
   <header>
@@ -27,12 +44,29 @@
         <a href="#edicao">Edicão</a>
         <a href="#contato">Contato</a>
         <a href="https://www.linkedin.com/in/witoriobandeira/" target="_blank">LinkedIn</a>
-        <a href="https://norazx7.github.io/CurriculoWB/" target="_blank">Curriculo</a>
       </div>
 
       <div class="hamburger">
         <span></span><span></span><span></span>
       </div>
+
+      <!-- DARK MODE TOGGLE -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
     </nav>
   </header>
 
@@ -40,28 +74,78 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-header">
-        <img src="assets/perfil.png" alt="Foto de Witorio" class="perfil-img">
-        <h2>Witorio Bandeira Couto</h2>
+        <img src="assets/perfil.png" alt="Foto de Witorio" class="perfil-img animate-float">
+        <h2 class="title-gradient">Witorio Bandeira Couto</h2>
+        <div class="typed-container">
+          <span class="typed-text"></span><span class="cursor">|</span>
+        </div>
       </div>
 
-      <p>
-        Estudante de Ciência da Computação (4º período), com experiência em suporte técnico, 
-        manutenção de computadores, atendimento ao usuário , rotinas administrativas e Marketing. 
-        Apaixonado por tecnologia, programação e infraestrutura.
-      </p>
+<p class="hero-description">
+Estudante de Ciência da Computação (4º período) focado em
+<strong>Desenvolvimento Full Stack</strong>, criando aplicações web
+modernas com <strong>HTML, CSS e JavaScript</strong>.
+Experiência em dashboards, páginas responsivas e soluções
+interativas com foco em performance e usabilidade.
+</p>
+
     </div>
   </section>
 
   <!-- SOBRE -->
-  <section id="sobre" class="section">
+  <section id="sobre" class="section about-section">
     <h3 class="title">Sobre Mim</h3>
-    <p>
-      Tenho 20 anos e experiência prática em suporte técnico, manutenção e configuração de sistemas, 
-      atendimento ao usuário, análise de problemas e organização administrativa. Desenvolvo projetos 
-      de programação, dashboards e páginas web, aplicando conceitos de algoritmos, lógica e estrutura de dados.
-      Busco constantemente evoluir na área de TI, construindo projetos reais e aprimorando minhas habilidades 
-      para atuar como <b>TI Júnior</b> e, futuramente, desenvolvedor. Atuo tambem na area de marketing, editando, estudando e avaliando o melhor insights , para uma melhor audiencia.
-    </p>
+    <div class="about-content">
+      <p>
+        Tenho 20 anos e sou um desenvolvedor apaixonado por tecnologia, unindo <strong>desenvolvimento web moderno</strong> com <strong>suporte técnico eficiente</strong>. Meu objetivo é criar experiências incríveis para os usuários através de código bem estruturado e interfaces intuitivas.
+      </p>
+
+      <p>
+        Desenvolvo aplicações utilizando <strong>HTML5, CSS3 e JavaScript moderno</strong>, aplicando sólidos conhecimentos em <strong>lógica de programação, algoritmos e estrutura de dados</strong>. Sou proficiente em criar aplicações responsivas, otimizadas e com excelente performance.
+      </p>
+
+      <p>
+        Minha jornada inclui experiência em suporte técnico, edição de vídeos e produção de conteúdo, o que me deu habilidades valiosas de comunicação e resolução de problemas. Busco evoluir como <strong>Desenvolvedor Full Stack Júnior</strong>, criando sistemas modernos, funcionais e escaláveis que resolvem problemas reais.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <h4>2+</h4>
+          <span>Anos de Experiência</span>
+        </div>
+        <div class="stat">
+          <h4>5+</h4>
+          <span>Projetos Completados</span>
+        </div>
+        <div class="stat">
+          <h4>100%</h4>
+          <span>Dedicação</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS FAVORITAS -->
+  <section class="section tech-favorites">
+    <h3 class="title">⚡ Tecnologias Favoritas</h3>
+    <div class="tech-grid">
+      <div class="tech-card" data-animate="up">
+        <h4>Frontend</h4>
+        <p>HTML5, CSS3, JavaScript Moderno, Responsive Design, DOM APIs</p>
+      </div>
+      <div class="tech-card" data-animate="up">
+        <h4>Backend & Dados</h4>
+        <p>APIs REST, JSON, Banco de Dados, Estrutura de Dados, Algoritmos</p>
+      </div>
+      <div class="tech-card" data-animate="up">
+        <h4>Ferramentas</h4>
+        <p>VS Code, Git/GitHub, Figma, DevTools, Performance Optimization</p>
+      </div>
+      <div class="tech-card" data-animate="up">
+        <h4>Soft Skills</h4>
+        <p>Comunicação, Resolução de Problemas, Liderança, Trabalho em Equipe</p>
+      </div>
+    </div>
   </section>
 
   <!-- HABILIDADES -->
@@ -70,21 +154,37 @@
 
     <div class="skills">
 
-      <div class="skill">Suporte Técnico</div>
-      <div class="skill">Montagem e Manutenção</div>
-      <div class="skill">Atendimento ao Usuário</div>
-      <div class="skill">Resolução de Problemas</div>
-      <div class="skill">Organização</div>
-      <div class="skill">Comunicação</div>
-      <div class="skill">Edição</div>
+      <!-- HABILIDADES TÉCNICAS FRONT-END -->
+      <div class="skill">🚀 HTML5 Semântico</div>
+      <div class="skill">🎨 CSS3 Avançado</div>
+      <div class="skill">⚡ JavaScript Moderno</div>
+      <div class="skill">📱 Responsive Design</div>
+      <div class="skill">🎯 DOM Manipulation</div>
+      <div class="skill">🔍 SEO & Performance</div>
 
-      <!-- HABILIDADES DE TI QUE VOCÊ PEDIU -->
-      <div class="skill">HTML / CSS / JavaScript</div>
-      <div class="skill">Pacote Office (Excel)</div>
-      <div class="skill">Análise de Dados</div>
-      <div class="skill">Algoritmos</div>
-      <div class="skill">Estrutura de Dados</div>
-      <div class="skill">Informática Avançada</div>
+      <!-- HABILIDADES TÉCNICAS BACK-END/DADOS -->
+      <div class="skill">📊 Análise de Dados</div>
+      <div class="skill">🔧 Algoritmos</div>
+      <div class="skill">📦 Estrutura de Dados</div>
+      <div class="skill">⚙️ REST APIs</div>
+      <div class="skill">🗄️ Banco de Dados Básico</div>
+      <div class="skill">💾 Git & GitHub</div>
+
+      <!-- HABILIDADES PROFISSIONAIS/SOFT SKILLS -->
+      <div class="skill">💼 Suporte Técnico</div>
+      <div class="skill">🔧 Montagem & Manutenção</div>
+      <div class="skill">👥 Atendimento ao Cliente</div>
+      <div class="skill">🎯 Resolução de Problemas</div>
+      <div class="skill">📋 Organização</div>
+      <div class="skill">💬 Comunicação Efetiva</div>
+
+      <!-- FERRAMENTAS/SOFTWARES -->
+      <div class="skill">✂️ Edição de Vídeo</div>
+      <div class="skill">🎬 Produção de Conteúdo</div>
+      <div class="skill">📊 Excel Avançado</div>
+      <div class="skill">🎨 Design Gráfico</div>
+      <div class="skill">🌐 Informática Avançada</div>
+      <div class="skill">⚡ Liderança & Trabalho em Equipe</div>
 
     </div>
   </section>
@@ -126,8 +226,23 @@
       </div>
 
             <div class="tool">
-        <img src="assets/JavaScript.png" alt="GitHub">
+        <img src="assets/JavaScript.png" alt="JavaScript">
         <span>JavaScript</span>
+      </div>
+
+      <div class="tool">
+        <img src="assets/vscode.png" alt="Node.js">
+        <span>Node.js</span>
+      </div>
+
+      <div class="tool">
+        <img src="assets/github.png" alt="React">
+        <span>React (Básico)</span>
+      </div>
+
+      <div class="tool">
+        <img src="assets/vscode.png" alt="JSON">
+        <span>JSON & APIs</span>
       </div>
     </div>
   </section>
@@ -316,26 +431,444 @@
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section id="contato" class="section">
-    <h3 class="title">Contato</h3>
-    <a class="btn" href="https://wa.me/5563991160301" target="_blank">WhatsApp</a>
-    <a class="btn" href="mailto:bwittorio@hotmail.com">Email</a>
-    <a class="btn" href="https://www.linkedin.com/in/witoriobandeira/" target="_blank">LinkedIn</a>
-    <a class="btn" href="https://norazx7.github.io/CurriculoWB/" target="_blank">Curriculo</a>
+  <!-- POR QUE TRABALHAR COMIGO -->
+  <section class="section why-work-section" data-animate="zoom">
+    <h3 class="title">Por Que Trabalhar Comigo? 🚀</h3>
+    <div class="why-grid">
+      <div class="why-card" data-animate="up">
+        <div class="why-icon">✨</div>
+        <h4>Qualidade Premium</h4>
+        <p>Código limpo, bem estruturado e documentado. Sigo as melhores práticas de desenvolvimento.</p>
+      </div>
+
+      <div class="why-card" data-animate="up">
+        <div class="why-icon">⚡</div>
+        <h4>Performance Otimizada</h4>
+        <p>Aplicações rápidas, responsivas e otimizadas para todos os dispositivos e navegadores.</p>
+      </div>
+
+      <div class="why-card" data-animate="up">
+        <div class="why-icon">🎯</div>
+        <h4>Foco em Resultados</h4>
+        <p>Entrego projetos dentro do prazo e sempre acima das expectativas do cliente.</p>
+      </div>
+
+      <div class="why-card" data-animate="up">
+        <div class="why-icon">💬</div>
+        <h4>Comunicação Clara</h4>
+        <p>Mantenho você informado em cada etapa do desenvolvimento. Sem surpresas!</p>
+      </div>
+
+      <div class="why-card" data-animate="up">
+        <div class="why-icon">🔒</div>
+        <h4>Código Seguro</h4>
+        <p>Implemento as melhores práticas de segurança e proteção de dados.</p>
+      </div>
+
+      <div class="why-card" data-animate="up">
+        <div class="why-icon">🌱</div>
+        <h4>Sempre Aprendendo</h4>
+        <p>Em constante atualização com as últimas tecnologias e tendências do mercado.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- CERTIFICADOS & CONQUISTAS -->
+  <section class="section achievements-section" data-animate="zoom">
+    <h3 class="title">🏆 Certificados & Conquistas</h3>
+    <div class="achievements-grid">
+      <div class="achievement-badge" data-animate="up">
+        <div class="badge-icon">🎓</div>
+        <h4>Ciência da Computação</h4>
+        <p>4º Período • ESTACIO-GO</p>
+      </div>
+
+      <div class="achievement-badge" data-animate="up">
+        <div class="badge-icon">💻</div>
+        <h4>Desenvolvedor Full Stack</h4>
+        <p>Em Progresso • Prático</p>
+      </div>
+
+      <div class="achievement-badge" data-animate="up">
+        <div class="badge-icon">🎨</div>
+        <h4>Designer & Produtor</h4>
+        <p>Edição de Vídeos • Fotografia</p>
+      </div>
+
+      <div class="achievement-badge" data-animate="up">
+        <div class="badge-icon">🔧</div>
+        <h4>Técnico em Informática</h4>
+        <p>Suporte & Manutenção</p>
+      </div>
+
+      <div class="achievement-badge" data-animate="up">
+        <div class="badge-icon">📊</div>
+        <h4>Análise de Dados</h4>
+        <p>Excel • Dashboards • BI</p>
+      </div>
+
+      <div class="achievement-badge" data-animate="up">
+        <div class="badge-icon">⭐</div>
+        <h4>Projetos Entregues</h4>
+        <p>5+ Projetos Completos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION CRIATIVO -->
+  <section class="section cta-section" data-animate="zoom">
+    <div class="cta-content">
+      <h3 class="cta-title">Bora Criar Algo Incrível? 🚀</h3>
+      <p class="cta-subtitle">Tenho ideias ousadas e habilidades para realizá-las. Vamos transformar sua visão em realidade!</p>
+      <div class="cta-stats">
+        <div class="cta-stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Comprometido</span>
+        </div>
+        <div class="cta-stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Criatividade</span>
+        </div>
+        <div class="cta-stat">
+          <span class="stat-number">🔥</span>
+          <span class="stat-label">Determinação</span>
+        </div>
+      </div>
+      <a href="#contato" class="cta-button">Vamos Começar!</a>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <h3 class="title">Entre em Contato</h3>
+    <p style="color: #dfe6ee; margin-bottom: 30px; font-size: 16px; text-align: center;">Vamos criar algo incrível juntos! Me envie uma mensagem.</p>
+    
+    <!-- FORMULÁRIO INTERATIVO -->
+    <div class="contact-form-container">
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Seu Nome" required>
+          <span class="form-icon">👤</span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Seu Email" required>
+          <span class="form-icon">📧</span>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Sua Mensagem..." rows="5" required></textarea>
+          <span class="form-icon">💬</span>
+        </div>
+        <button type="submit" class="form-submit-btn">Enviar Mensagem 🚀</button>
+        <div class="form-feedback" id="formFeedback"></div>
+      </form>
+    </div>
+
+    <!-- Links alternativos -->
+    <div style="text-align: center; margin-top: 40px;">
+      <p style="color: #b8c1ce; margin-bottom: 15px;">Ou envie diretamente:</p>
+      <a class="btn" href="mailto:pwittorio@hotmail.com">📧 Email Direto</a>
+      <a class="btn" href="https://www.linkedin.com/in/witoriobandeira/" target="_blank">💼 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- WAVE ANIMATION -->
+  <div class="wave-container">
+    <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,26,26,0.1)"></path>
+    </svg>
+    <svg class="wave wave-2" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,60 Q300,10 600,60 T1200,60 L1200,120 L0,120 Z" fill="rgba(255,26,26,0.05)"></path>
+    </svg>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
-    © 2025 • Desenvolvido por Witorio Bandeira Couto
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Witorio Bandeira</h5>
+        <p>Full Stack Developer & Tech Enthusiast</p>
+      </div>
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h5>Redes Sociais</h5>
+        <div class="social-links">
+          <a href="https://github.com/norazx7" target="_blank" title="GitHub">💻</a>
+          <a href="https://www.linkedin.com/in/witoriobandeira/" target="_blank" title="LinkedIn">💼</a>
+          <a href="https://www.instagram.com/norazx.7" target="_blank" title="Instagram">📸</a>
+        </div>
+      </div>
+    </div>
+    <hr style="border: none; border-top: 1px solid rgba(255,26,26,0.1); margin: 30px 0;">
+    <p style="opacity: 0.8; font-size: 14px;">© 2025 • Desenvolvido com ❤️ por Witorio Bandeira Couto • Todos os direitos reservados</p>
   </footer>
 
   <script>
+    /* =========================
+       ANIMAÇÃO DE SCROLL
+    ========================= */
+
+    const animatedItems = document.querySelectorAll('[data-animate]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    animatedItems.forEach(item => observer.observe(item));
+
+    /* =========================
+       NAVBAR REAGE AO SCROLL
+    ========================= */
+
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('nav .menu');
 
     hamburger.addEventListener('click', () => {
       menu.classList.toggle('active');
       hamburger.classList.toggle('active');
+    });
+
+    /* =========================
+       TYPED TEXT EFFECT
+    ========================= */
+
+    const texts = [
+      'Full Stack Developer',
+      'Web Designer',
+      'JavaScript Lover',
+      'Problem Solver',
+      'Tech Enthusiast'
+    ];
+
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedElement = document.querySelector('.typed-text');
+    const speed = 100;
+    const deleteSpeed = 50;
+    const pauseTime = 2000;
+
+    function type() {
+      const currentText = texts[textIndex];
+
+      if (!isDeleting) {
+        // Digitando
+        if (charIndex < currentText.length) {
+          typedElement.textContent += currentText.charAt(charIndex);
+          charIndex++;
+          setTimeout(type, speed);
+        } else {
+          // Pausa antes de deletar
+          isDeleting = true;
+          setTimeout(type, pauseTime);
+        }
+      } else {
+        // Deletando
+        if (charIndex > 0) {
+          typedElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(type, deleteSpeed);
+        } else {
+          // Próximo texto
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
+          setTimeout(type, 500);
+        }
+      }
+    }
+
+    // Iniciar animação quando o documento está pronto
+    type();
+
+    /* =========================
+       DARK MODE TOGGLE
+    ========================= */
+
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    
+    // Verificar preferência salva
+    const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+    htmlElement.classList.add(savedTheme);
+    
+    if (savedTheme === 'dark-mode') {
+      themeToggle.classList.add('dark-mode');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = htmlElement.classList.contains('dark-mode');
+      
+      if (isDark) {
+        htmlElement.classList.remove('dark-mode');
+        htmlElement.classList.add('light-mode');
+        themeToggle.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light-mode');
+      } else {
+        htmlElement.classList.remove('light-mode');
+        htmlElement.classList.add('dark-mode');
+        themeToggle.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+      }
+      
+      // Confetti no toggle!
+      createConfetti();
+    });
+
+    /* =========================
+       CONTACT FORM HANDLER
+    ========================= */
+
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Validação
+      if (!name.trim() || !email.trim() || !message.trim()) {
+        formFeedback.textContent = '❌ Preencha todos os campos!';
+        formFeedback.classList.add('error');
+        formFeedback.classList.remove('success');
+        return;
+      }
+
+      // Simular envio
+      formFeedback.textContent = '⏳ Enviando...';
+      
+      setTimeout(() => {
+        // Criar mailto link
+        const subject = encodeURIComponent('Mensagem do Portfólio');
+        const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
+        
+        // Abrir cliente de email
+        window.open(`mailto:pwittorio@hotmail.com?subject=${subject}&body=${body}`);
+
+        formFeedback.textContent = '✅ Mensagem preparada! Seu cliente de email será aberto.';
+        formFeedback.classList.add('success');
+        formFeedback.classList.remove('error');
+
+        // Limpar formulário
+        contactForm.reset();
+
+        // Confetti!
+        createConfetti();
+
+        // Limpar feedback após 3s
+        setTimeout(() => {
+          formFeedback.textContent = '';
+          formFeedback.classList.remove('success', 'error');
+        }, 3000);
+      }, 800);
+    });
+
+    /* =========================
+       CONFETTI EFFECT
+    ========================= */
+
+    function createConfetti() {
+      const confettiCount = 30;
+      const colors = ['#ff1a1a', '#ff6b6b', '#ffb3b3', '#ffffff'];
+
+      for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'fixed';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.top = '-10px';
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = confetti.style.width;
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = '50%';
+        confetti.style.pointerEvents = 'none';
+        confetti.style.zIndex = '999';
+        confetti.style.opacity = '1';
+        confetti.style.boxShadow = `0 0 ${Math.random() * 10}px ${confetti.style.background}`;
+        
+        document.body.appendChild(confetti);
+
+        const duration = Math.random() * 2 + 2;
+        const rotation = Math.random() * 360;
+        const xMove = (Math.random() - 0.5) * 200;
+
+        confetti.animate([
+          {
+            transform: `translateY(0) translateX(0) rotate(0deg)`,
+            opacity: 1
+          },
+          {
+            transform: `translateY(${window.innerHeight + 20}px) translateX(${xMove}px) rotate(${rotation}deg)`,
+            opacity: 0
+          }
+        ], {
+          duration: duration * 1000,
+          easing: 'cubic-bezier(.25, .46, .45, .94)'
+        });
+
+        setTimeout(() => confetti.remove(), duration * 1000);
+      }
+    }
+
+    // Confetti ao clicar em buttons específicos
+    const ctas = document.querySelectorAll('.cta-button, .btn, .form-submit-btn');
+    ctas.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (e.target.form) return; // Skip form submits
+        createConfetti();
+      });
+    });
+
+
+    /* =========================
+       PROGRESS BAR & BACK TO TOP
+    ========================= */
+
+    const progressBar = document.querySelector('.progress-bar');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    // Update progress bar on scroll
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      progressBar.style.width = scrollPercent + '%';
+
+      // Show/hide back to top button
+      if (scrollTop > 300) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    });
+
+    // Back to top functionality
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   </script>
 

@@ -1108,6 +1108,249 @@ footer{
   flex: 1;
 }
 
+/* ========== CATALOGO ========== */
+.catalog-section .title {
+  margin-bottom: 28px;
+}
+
+.promo-banner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 22px;
+  background: linear-gradient(135deg, rgba(255,26,26,0.18), rgba(0,0,0,0.65));
+  border: 1px solid rgba(255,26,26,0.25);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+}
+
+.promo-main h4 {
+  font-size: 24px;
+  margin: 10px 0 8px;
+  color: #fff;
+}
+
+.promo-main p {
+  color: #e6edf5;
+}
+
+.promo-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,26,26,0.18);
+  border: 1px solid rgba(255,26,26,0.35);
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.promo-note {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,26,26,0.2);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.promo-note h5 {
+  color: var(--accent2);
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.promo-note p {
+  color: #e6edf5;
+  line-height: 1.6;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 26px;
+}
+
+.catalog-card {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,0,0,0.12);
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.catalog-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent2);
+  box-shadow: 0 20px 45px rgba(255,0,0,0.2);
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.catalog-header h4 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.catalog-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,26,26,0.2);
+  border: 1px solid rgba(255,26,26,0.35);
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.catalog-card p {
+  color: #e3e9ef;
+  line-height: 1.5;
+}
+
+.catalog-card.is-clickable {
+  cursor: pointer;
+}
+
+.catalog-card.is-clickable:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 2px;
+}
+
+.catalog-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0 12px;
+}
+
+.catalog-gallery img {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,0,0,0.12);
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.catalog-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 999;
+}
+
+.catalog-modal.active {
+  display: flex;
+}
+
+.catalog-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+
+.catalog-modal-content {
+  position: relative;
+  width: min(900px, 92vw);
+  max-height: 85vh;
+  overflow: auto;
+  background: rgba(10,10,10,0.95);
+  border: 1px solid rgba(255,0,0,0.2);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.catalog-modal-title {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.catalog-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,26,26,0.2);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.catalog-modal-body {
+  display: grid;
+  gap: 16px;
+}
+
+.catalog-modal-body img,
+.catalog-modal-body video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,0,0,0.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+}
+
+.catalog-list {
+  list-style: none;
+  margin: 12px 0 16px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.catalog-list li {
+  color: #dfe6ee;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.catalog-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.catalog-cta {
+  margin-top: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+.catalog-cta-link {
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.catalog-cta-link:hover {
+  text-shadow: 0 0 10px rgba(255,26,26,0.4);
+}
+
+@media (max-width: 900px) {
+  .promo-banner {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* botão transformado em card/cta animado */
 .project-btn{
   display: inline-flex;
